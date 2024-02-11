@@ -1,4 +1,4 @@
-from requests_html import HTMLSession, user_agent
+from requests_html import HTMLSession
 
 s = HTMLSession()
 
@@ -9,4 +9,4 @@ r = s.get(url, headers={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) 
 
 temp = r.html.find('span#wob_tm', first=True).text
 
-print(r.html.find('div.vk_bk wob-unit', first=True))
+print(r.html.render())
